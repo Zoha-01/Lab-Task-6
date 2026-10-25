@@ -11,5 +11,7 @@ public class StudentMarks {
         studentMap.put("Sara", 78);
         studentMap.put("Usman", 92);
         studentMap.put("Zainab", 88);
+        // Step 3: Print header
+        System.out.println("--- All Student Records ---");
     }
 }
