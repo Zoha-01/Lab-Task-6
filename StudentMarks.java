@@ -21,6 +21,8 @@ public class StudentMarks {
             System.out.println("Student: " + entry.getKey() + " | Marks: " + entry.getValue());
         // Step 5: Update Ali's marks
         studentMap.put("Ali", 95);
+        // Step 6: Output updated marks
+        System.out.println("\n[Update] Updated Ali's marks to: " + studentMap.get("Ali"));
         }
         }
 
