@@ -22,3 +22,12 @@ public class SynchronizedStudentMap {
                 }
             });
         }
+        // 4. Use shutdown() and awaitTermination()
+        executor.shutdown();
+        try {
+            if (!executor.awaitTermination(5, TimeUnit.SECONDS)) {
+                executor.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            executor.shutdownNow();
+        }
