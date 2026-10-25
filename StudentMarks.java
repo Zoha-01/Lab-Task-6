@@ -7,3 +7,9 @@ public class StudentMarks {
         HashMap<String, Integer> studentMap = new HashMap<>();
     }
 }
+// Step 2: Insert records
+        studentMap.put("Ali", 85);
+        studentMap.put("Ahmed", 90);
+        studentMap.put("Sara", 78);
+        studentMap.put("Usman", 92);
+        studentMap.put("Zainab", 88);
