@@ -11,3 +11,8 @@ public class ConcurrentStudentMap {
         int numberOfThreads = 5;
         int recordsPerThread = 1000;
         int expectedEntries = numberOfThreads * recordsPerThread;
+        // 2. Create an ExecutorService with five threads
+        ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
+
+        // Record start time to measure execution time
+        long startTime = System.currentTimeMillis();
