@@ -31,3 +31,11 @@ public class SynchronizedStudentMap {
         } catch (InterruptedException e) {
             executor.shutdownNow();
         }
+        // 5. Display expected and actual number of entries
+        int expectedEntries = 3 * 100;
+        int actualEntries = syncMap.size();
+
+        System.out.println("Expected Entries: " + expectedEntries);
+        System.out.println("Actual Entries: " + actualEntries);
+    }
+}
