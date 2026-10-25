@@ -19,6 +19,8 @@ public class StudentMarks {
         // Step 4: Loop through records
         for (Map.Entry<String, Integer> entry : studentMap.entrySet()) {
             System.out.println("Student: " + entry.getKey() + " | Marks: " + entry.getValue());
+        // Step 5: Update Ali's marks
+        studentMap.put("Ali", 95);
         }
         }
 
