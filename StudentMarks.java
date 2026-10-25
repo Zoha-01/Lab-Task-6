@@ -13,5 +13,9 @@ public class StudentMarks {
         studentMap.put("Zainab", 88);
         // Step 3: Print header
         System.out.println("--- All Student Records ---");
+        // Step 4: Loop through records
+        for (Map.Entry<String, Integer> entry : studentMap.entrySet()) {
+            System.out.println("Student: " + entry.getKey() + " | Marks: " + entry.getValue());
+        }
     }
 }
