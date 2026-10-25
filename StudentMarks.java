@@ -23,6 +23,8 @@ public class StudentMarks {
         studentMap.put("Ali", 95);
         // Step 6: Output updated marks
         System.out.println("\n[Update] Updated Ali's marks to: " + studentMap.get("Ali"));
+        // Step 7: Define search target
+        String targetStudent = "Usman";
         }
         }
 
