@@ -16,3 +16,13 @@ public class ConcurrentStudentMap {
 
         // Record start time to measure execution time
         long startTime = System.currentTimeMillis();
+        // 3. Make each thread insert 1,000 unique student records
+        for (int i = 1; i <= numberOfThreads; i++) {
+            final int threadId = i;
+            executor.submit(() -> {
+                for (int j = 1; j <= recordsPerThread; j++) {
+                    String studentKey = "Student_T" + threadId + "_" + j;
+                    concurrentMap.put(studentKey, 60 + (j % 40));
+                }
+            });
+        }
