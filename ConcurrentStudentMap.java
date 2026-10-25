@@ -26,3 +26,12 @@ public class ConcurrentStudentMap {
                 }
             });
         }
+        // Wait for all threads to finish execution
+        executor.shutdown();
+        try {
+            if (!executor.awaitTermination(10, TimeUnit.SECONDS)) {
+                executor.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            executor.shutdownNow();
+        }
