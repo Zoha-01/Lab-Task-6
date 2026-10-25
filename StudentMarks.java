@@ -1,0 +1,39 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class StudentMarks {
+    public static void main(String[] args) {
+        // Step 1: HashMap declaration
+        HashMap<String, Integer> studentMap = new HashMap<>();
+
+        // Step 2: Insert records
+        studentMap.put("Ali", 85);
+        studentMap.put("Ahmed", 90);
+        studentMap.put("Sara", 78);
+        studentMap.put("Usman", 92);
+        studentMap.put("Zainab", 88);
+
+        // Step 3: Print header
+        System.out.println("--- All Student Records ---");
+
+        // Step 4: Loop through records
+        for (Map.Entry<String, Integer> entry : studentMap.entrySet()) {
+            System.out.println("Student: " + entry.getKey() + " | Marks: " + entry.getValue());
+        }
+
+        // Step 5: Update Ali's marks
+        studentMap.put("Ali", 95);
+
+        // Step 6: Output updated marks
+        System.out.println("\n[Update] Updated Ali's marks to: " + studentMap.get("Ali"));
+
+        // Step 7: Define search target
+        String targetStudent = "Usman";
+
+        // Step 8: Retrieve specific student marks
+        System.out.println("[Retrieve] Marks for " + targetStudent + ": " + studentMap.get(targetStudent));
+
+        // Step 9: Total count using size()
+        System.out.println("\n[Total Students] Count: " + studentMap.size());
+    }
+}
