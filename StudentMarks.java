@@ -25,6 +25,8 @@ public class StudentMarks {
         System.out.println("\n[Update] Updated Ali's marks to: " + studentMap.get("Ali"));
         // Step 7: Define search target
         String targetStudent = "Usman";
+        // Step 8: Retrieve specific student marks
+        System.out.println("[Retrieve] Marks for " + targetStudent + ": " + studentMap.get(targetStudent));
         }
         }
 
