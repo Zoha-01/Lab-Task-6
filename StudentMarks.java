@@ -27,6 +27,8 @@ public class StudentMarks {
         String targetStudent = "Usman";
         // Step 8: Retrieve specific student marks
         System.out.println("[Retrieve] Marks for " + targetStudent + ": " + studentMap.get(targetStudent));
+        // Step 9: Total count using size()
+        System.out.println("\n[Total Students] Count: " + studentMap.size());
         }
         }
 
