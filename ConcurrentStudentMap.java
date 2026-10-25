@@ -35,3 +35,21 @@ public class ConcurrentStudentMap {
         } catch (InterruptedException e) {
             executor.shutdownNow();
         }
+        // 4. Retrieve values associated with inserted keys
+        int sampleVal1 = concurrentMap.get("Student_T1_1");
+        int sampleVal2 = concurrentMap.get("Student_T5_1000");
+
+        // Record end time
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
+
+        // 5 & 6. Display metrics
+        System.out.println("--- ConcurrentHashMap Execution Summary ---");
+        System.out.println("Number of Threads: " + numberOfThreads);
+        System.out.println("Expected Entries: " + expectedEntries);
+        System.out.println("Actual Entries: " + concurrentMap.size());
+        System.out.println("Sample Retrieval T1_1 Marks: " + sampleVal1);
+        System.out.println("Sample Retrieval T5_1000 Marks: " + sampleVal2);
+        System.out.println("Total Execution Time: " + executionTime + " ms");
+    }
+}
